@@ -19,7 +19,6 @@ const orchid = {
   image: "images/4n.jpg",
 };
 function App() {
-  const [count, setCount] = useState(0);
   const [showModal, setShowModal] = useState(false);
   const [selectedOrchid, setSelectedOrchid] = useState(null);
 
