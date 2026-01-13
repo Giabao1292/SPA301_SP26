@@ -2,6 +2,7 @@ import { useState, useMemo } from "react";
 import Orchid from "./Orchid";
 import OrchidModal from "./OrchidModal";
 import FilterSort from "./FilterSort";
+import CustomModal from "./CustomModal";
 
 export default function ListOrchids({ orchids, searchKeyword }) {
   const [showModal, setShowModal] = useState(false);
@@ -9,11 +10,6 @@ export default function ListOrchids({ orchids, searchKeyword }) {
 
   const [selectedCategory, setSelectedCategory] = useState("");
   const [sortType, setSortType] = useState("");
-
-  const handleViewDetail = (orchid) => {
-    setSelectedOrchid(orchid);
-    setShowModal(true);
-  };
 
   const categories = useMemo(() => {
     return [...new Set(orchids.map((o) => o.category))];
@@ -65,18 +61,16 @@ export default function ListOrchids({ orchids, searchKeyword }) {
 
       <div className="orchid-grid">
         {filteredOrchids.map((orchid) => (
-          <Orchid
-            key={orchid.id}
-            orchid={orchid}
-            onViewDetail={handleViewDetail}
-          />
+          <Orchid key={orchid.id} orchid={orchid} />
         ))}
       </div>
 
-      <OrchidModal
+      <CustomModal
         show={showModal}
-        orchid={selectedOrchid}
         onClose={() => setShowModal(false)}
+        type="orchid"
+        title={selectedOrchid?.name}
+        data={selectedOrchid}
       />
     </>
   );

@@ -1,28 +1,51 @@
-import Footer from "./components/Footer";
+import { useState } from "react";
 import Header from "./components/Header";
-import { useState, useMemo } from "react";
-import "./App.css";
-import listOfOrchids from "./data/ListOfOrchids";
+import Footer from "./components/Footer";
 import ListOrchids from "./components/ListOrchids";
-import { Container } from "react-bootstrap";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import { Routes, Route } from "react-router-dom";
+import listOfOrchids from "./data/ListOfOrchids";
+import "./App.css";
+import OrchidDetail from "./components/OrchidDetail";
 function App() {
   const [searchKeyword, setSearchKeyword] = useState("");
 
   return (
     <>
-      <Header onSearch={setSearchKeyword} />
+      <div className="app-wrapper">
+        <Header onSearch={setSearchKeyword} />
 
-      <main className="main-wrapper">
-        <h1>🌸 Orchid Store</h1>
+        <main className="main-wrapper">
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  <h1>🌸 Orchid Store</h1>
+                  <ListOrchids
+                    orchids={listOfOrchids}
+                    searchKeyword={searchKeyword}
+                  />
+                </>
+              }
+            />
+            <Route
+              path="/orchid/:id"
+              element={<OrchidDetail orchids={listOfOrchids} />}
+            />
 
-        <ListOrchids orchids={listOfOrchids} searchKeyword={searchKeyword} />
-      </main>
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </main>
 
-      <Footer
-        avatar="/images/whynot.jpg"
-        name="Lê Bảo"
-        email="lebao@gmail.com"
-      />
+        <Footer
+          avatar="/images/whynot.jpg"
+          name="Lê Bảo"
+          email="lebao@gmail.com"
+        />
+      </div>
     </>
   );
 }

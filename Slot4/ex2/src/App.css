@@ -12,7 +12,11 @@
   gap: 24px;
   width: 100%;
 }
-
+.app-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 .orchid-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));

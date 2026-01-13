@@ -1,6 +1,15 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
-export default function Orchid({ orchid, onViewDetail }) {
+import { useNavigate } from "react-router-dom";
+
+export default function Orchid({ orchid }) {
+  const navigate = useNavigate();
+
+  const handleViewDetail = () => {
+    // Điều hướng sang trang detail và truyền id qua URL
+    navigate(`/orchid/${orchid.id}`);
+  };
+
   return (
     <div className="orchid-card">
       <div className="img-wrapper">
@@ -14,7 +23,8 @@ export default function Orchid({ orchid, onViewDetail }) {
       <p className="category">{orchid.category}</p>
 
       {orchid.isSpecial && <span className="badge">Special</span>}
-      <Button onClick={() => onViewDetail(orchid)}>Xem chi tiết</Button>
+
+      <Button onClick={handleViewDetail}>Xem chi tiết</Button>
     </div>
   );
 }
