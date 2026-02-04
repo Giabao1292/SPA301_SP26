@@ -14,6 +14,7 @@ export const updateOrchid = async (id, data) => {
   const res = await axiosClient.put(`/orchids/${id}`, data);
   return res.data;
 };
+x;
 
 export const deleteOrchid = async (id) => {
   await axiosClient.delete(`/orchids/${id}`);

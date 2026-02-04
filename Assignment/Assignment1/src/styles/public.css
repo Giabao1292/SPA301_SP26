@@ -1,0 +1,31 @@
+.public-wrapper {
+  padding: 3rem 4rem;
+  min-height: 100vh;
+  background: #f8fafc;
+}
+
+.public-hero {
+  margin-bottom: 2rem;
+}
+
+.public-hero h1 {
+  margin-top: 0.75rem;
+}
+
+.news-card {
+  border: none;
+  border-radius: 18px;
+  box-shadow: 0 16px 28px rgba(15, 23, 42, 0.08);
+  height: 100%;
+}
+
+.news-card h5 {
+  margin-top: 0.75rem;
+}
+
+.news-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #64748b;
+}

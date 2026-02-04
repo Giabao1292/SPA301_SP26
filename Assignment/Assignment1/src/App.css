@@ -1,0 +1,78 @@
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.section-header h3 {
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.section-header p {
+  color: #6c757d;
+  margin: 0;
+}
+
+.stat-card {
+  border: none;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #ffffff 0%, #f3f7ff 100%);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+}
+
+.stat-card h2 {
+  margin: 0.5rem 0;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  color: #6c757d;
+}
+
+.custom-modal-overlay {
+  background: rgba(15, 23, 42, 0.6);
+  position: fixed;
+  inset: 0;
+  z-index: 1050;
+  overflow-y: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.custom-modal {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 520px;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.2);
+  position: relative;
+  z-index: 1060;
+  width: 100%;
+}
+
+.custom-modal-lg {
+  max-width: 720px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+.tag-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.profile-card {
+  border-radius: 16px;
+  border: none;
+  box-shadow: 0 16px 30px rgba(15, 23, 42, 0.08);
+}

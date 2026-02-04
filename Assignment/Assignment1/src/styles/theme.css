@@ -1,0 +1,17 @@
+:root {
+  --brand-primary: #2563eb;
+  --brand-dark: #0f172a;
+  --brand-muted: #64748b;
+  --brand-light: #f8fafc;
+  --brand-card: #ffffff;
+}
+
+.btn-primary {
+  background-color: var(--brand-primary);
+  border-color: var(--brand-primary);
+}
+
+.btn-outline-light {
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #fff;
+}

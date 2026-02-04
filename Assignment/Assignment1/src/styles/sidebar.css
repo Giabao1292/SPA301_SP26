@@ -1,0 +1,63 @@
+.sidebar {
+  width: 260px;
+  background: #0f172a;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.5rem;
+}
+
+.sidebar-brand {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.sidebar-brand h1 {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.sidebar-brand p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.logo-mark {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #38bdf8, #2563eb);
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.sidebar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.7);
+  padding: 0.7rem 1rem;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.sidebar-nav .nav-link.active,
+.sidebar-nav .nav-link:hover {
+  background: rgba(148, 163, 184, 0.2);
+  color: #fff;
+}
+
+.sidebar-footer {
+  border-top: 1px solid rgba(148, 163, 184, 0.2);
+  padding-top: 1rem;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+}
