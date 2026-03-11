@@ -1,0 +1,67 @@
+:root {
+    --primary: #3b82f6;
+    --primary-soft: #e0edff;
+    --success-soft: #e6f7ef;
+    --bg-soft: #f5f7fb;
+    --text-dark: #1f2937;
+}
+
+body {
+    font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+    color: var(--text-dark);
+}
+
+.bg-soft {
+    background: var(--bg-soft);
+}
+
+.bg-gradient-primary {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+}
+
+.bg-soft-primary {
+    background: var(--primary-soft);
+}
+
+.bg-soft-success {
+    background: var(--success-soft);
+}
+
+.card {
+    border-radius: 1.25rem;
+}
+
+.card-header {
+    border-bottom: none;
+}
+
+.form-control {
+    border-radius: 0.75rem;
+    border-color: #e5e7eb;
+}
+
+.form-control:focus {
+    border-color: #93c5fd;
+    box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.15);
+}
+
+.btn {
+    border-radius: 0.75rem;
+    font-weight: 600;
+}
+
+.table thead th {
+    font-weight: 600;
+}
+
+.navbar-brand {
+    letter-spacing: 0.3px;
+}
+
+.shadow-lg {
+    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.12) !important;
+}
+
+.shadow-sm {
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08) !important;
+}
